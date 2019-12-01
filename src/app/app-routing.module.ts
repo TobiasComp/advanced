@@ -10,6 +10,8 @@ import { AmericansComponent } from './comps/americans/americans.component';
 import { NativeComponent } from './comps/Americans/native/native.component';
 import { BlacksComponent } from './comps/Americans/blacks/blacks.component';
 import { ImmigrantsComponent } from './comps/Americans/immigrants/immigrants.component';
+import { ReactiveformsComponent } from './comps/reactiveforms/reactiveforms.component';
+import { ReactiveFormGroupsComponent } from './comps/reactive-form-groups/reactive-form-groups.component';
 
 const routes: Routes = [
   { path: 'americans',children:[
@@ -19,10 +21,12 @@ const routes: Routes = [
     { path: 'immigrants', component:ImmigrantsComponent},
   ] },
   { path: 'chocolate', component:ChocolateComponent},
+  { path: 'formgroup', component:ReactiveFormGroupsComponent},
   { path: 'login', component:LoginComponent},
   { path: 'ice-cream', component:IceCreamComponent, canActivate:[CanActivateIceCreamLinkService]},
   { path: 'json-user/:id', component:JsonUserComponent},
   { path: 'data-title', component:DataTitleComponent, data:{title:'what is going here!!!!'}},
+  { path: 'forms', component:ReactiveformsComponent, },
   { path: '', redirectTo:'/chocolate', pathMatch:'full'},
   { path: '**', redirectTo:'/chocolate', pathMatch:'full'},
  

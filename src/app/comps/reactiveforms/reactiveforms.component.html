@@ -1,0 +1,31 @@
+
+
+
+<form action="">
+
+    Username: <input [formControl]="name" name="userName" type="text">
+    User Age: <input [formControl]="age" name="userAge" type="text">
+    <button type="button" (click)="addUser()">Submit</button>
+
+</form>
+
+<table border="4">
+    <tr>
+        <td>Name</td>
+        <td>Age</td>
+    </tr>
+    <tr *ngFor="let user of userList">
+        <td>{{user.name}}</td>
+        <td>{{user.age}}</td>
+    </tr>
+</table>
+
+<hr><hr>
+<p>Immitating ngModel</p>
+<table>
+    <tr>
+        <td>name: {{name.value}}</td><br>
+        <td>age:  {{age.value}}</td>
+    </tr>
+</table>
+<hr><hr>

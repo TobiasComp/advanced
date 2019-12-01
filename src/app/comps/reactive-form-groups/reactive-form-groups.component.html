@@ -1,0 +1,30 @@
+<p>reactive-form-groups works!</p>
+
+
+<form [formGroup]="contactUsFormGroup" (ngSubmit)="submitContact()">
+    subject: <input type="text"  formControlName="subject"><br>
+    content: <input type="text"  formControlName="content"><br>
+    name: <input type="text"  formControlName="name"><br>
+    email: <input type="text"  formControlName="email"><br>
+    <button>Submit</button>
+    <button type="reset">Reset</button>
+</form>
+
+<table border="1">
+    <thead>
+        <tr>
+            <td>subject</td>
+            <td>content</td>
+            <td>name</td>
+            <td>email</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let contact of contactService.contactUs">
+            <td>{{contact.subject}}</td>
+            <td>{{contact.content}}</td>
+            <td>{{contact.name}}</td>
+            <td>{{contact.email}}</td>
+        </tr>
+    </tbody>
+</table>
