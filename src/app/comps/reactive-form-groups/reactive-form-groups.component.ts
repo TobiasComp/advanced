@@ -23,15 +23,8 @@ export class ReactiveFormGroupsComponent implements OnInit {
   }
 
   submitContact(){
-    let contactGroup:ContactUs =  this.contactUsFormGroup.value as ContactUs
-    console.log(contactGroup);
-    console.log(this.contactService);
-    
-    console.log(this.contactService.contactUs);
-    
-     
+    let contactGroup:ContactUs =  this.contactUsFormGroup.value   
     this.contactService.contactUs.push(contactGroup)
-
   }
 
 }
